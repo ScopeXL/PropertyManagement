@@ -7,8 +7,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="header">
+        <div id="banner"></div>
+        <div id="navigation">
+            <%= link_to "Home", leases_path, :id => "first", :class => "navItem" %>
+            <%= link_to "Leases", leases_path, :class => "navItem" %>
+            <%= link_to "Properties", properties_path, :class => "navItem" %>
+            <%= link_to "Repair Requests", repair_requests_path, :class => "navItem" %>
+            <%= link_to "Units", units_path, :class => "navItem" %>
+            <%= link_to "User", users_path, :class => "navItem" %>
+            
+            <% if current_user %>
+            	<%= link_to "Edit Profile", edit_user_path(:current), :class => "navItem" %>
+            	<%= link_to "Logout", logout_path, :class => "navItem" %>
+            <% else %>
+            	<%= link_to "Login", login_path, :class => "navItem" %>
+            	<%= link_to "Register", new_user_path, :class => "navItem" %>
+            <% end %>
+
+        </div>
+    </div>
+    
+    <% if flash[:error] -%>
+    	<div id='error'><%=h flash[:error] %></div>
+    <% end -%>
+    <% if flash[:notice] -%>
+    	<div id='notice'><%=h flash[:notice] %></div>
+    <% end -%>
 
 <%= yield %>
 
+	<div id="footer">
+        <hr />
+        Copyright &copy; 2013 Property Management System, Inc.
+    </div>
 </body>
 </html>
