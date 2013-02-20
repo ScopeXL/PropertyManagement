@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Open date:</b>
+  <%= @repair_request.open_date %>
+</p>
+
+<p>
+  <b>Close date:</b>
+  <%= @repair_request.close_date %>
+</p>
+
+<p>
+  <b>Request details:</b>
+  <%= @repair_request.request_details %>
+</p>
+
+<p>
+  <b>Request response:</b>
+  <%= @repair_request.request_response %>
+</p>
+
+<p>
+  <b>Submitter:</b>
+  <%= @repair_request.submitter_id %>
+</p>
+
+<p>
+  <b>Responder:</b>
+  <%= @repair_request.responder_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_repair_request_path(@repair_request) %> |
+<%= link_to 'Back', repair_requests_path %>

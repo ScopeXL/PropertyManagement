@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  open_date: 2013-02-19
+  close_date: 2013-02-19
+  request_details: MyText
+  request_response: MyText
+  submitter_id: 1
+  responder_id: 1
+
+two:
+  open_date: 2013-02-19
+  close_date: 2013-02-19
+  request_details: MyText
+  request_response: MyText
+  submitter_id: 1
+  responder_id: 1

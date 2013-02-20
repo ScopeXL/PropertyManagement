@@ -1,4 +1,19 @@
 Propertymanagement::Application.routes.draw do
+  resources :user_sessions
+
+
+  resources :repair_requests
+
+
+  resources :users
+
+
+  resources :leases
+
+
+  resources :units
+
+
   resources :properties
 
 
